@@ -6,16 +6,17 @@
 /*   By: hubrygo <hubrygo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 10:32:43 by hubrygo           #+#    #+#             */
-/*   Updated: 2023/05/03 13:35:37 by hubrygo          ###   ########.fr       */
+/*   Updated: 2023/05/05 11:08:51 by hubrygo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <unistd.h>
 # include "printf/ft_printf.h"
+# include "19_libft/libft.h"
 
-int	ft_atoi(const char *str);
+t_list	*ft_set_lst(int argc, char **argv);
+int		main(int argc, char **argv);
 
 #endif

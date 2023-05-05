@@ -1,12 +1,14 @@
-SRCS    =	printf/libftprintf.a \
-			printf/ft_printf.c \
-			printf/ft_utils.c \
-			ft_utils.c \
-			push_swap.c
+SRCS    =	ft_set_lst.c \
+			push_swap.c \
+			printf/libftprintf.a \
+			19_libft/ft_atoi.c \
+			19_libft/ft_lstnew_bonus.c \
+			19_libft/ft_lstadd_back_bonus.c \
+			main.c
 OBJS    = ${SRCS:.c=.o}
 INCS    = includes
-NAME    = push_swap.a
-LIBC    = ar rc
+NAME    = push_swap
+LIBC    = ar rcs
 LIBR    = ranlib
 CC        = gcc
 RM        = rm -rf
@@ -28,13 +30,14 @@ fclean: clean
 	${RM} ${NAME}
 
 compile:
-	${CC} -fsanitize=address -g ${CFLAGS} ${SRCS} ${c} && ./a.out 12 5 23 33 3
+	${CC} -fsanitize=address -g ${CFLAGS} -o ${NAME} ${SRCS} ${c} && ./push_swap 12 2 23 33 3
 
 c:
-	${RM} *.o printf/*.o push_swap.a
+	${RM} *.o printf/*.o
 
 C:
-	${RM} ${c} a.out a.out.dSYM
+	${RM} ${c} push_swap push_swap.dSYM
+
 
 re: fclean all
 
