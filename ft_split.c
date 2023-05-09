@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hubrygo <hubrygo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/10 18:54:38 by hubrygo           #+#    #+#             */
-/*   Updated: 2023/04/13 14:18:02 by hubrygo          ###   ########.fr       */
+/*   Created: 2023/05/08 18:20:59 by hubrygo           #+#    #+#             */
+/*   Updated: 2023/05/08 19:07:20 by hubrygo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	*ft_lstsplit(char *str)
 {
-	if (!lst || !f)
-		return ;
-	while (lst)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
-}
+	t_list	*temp;
+	t_list	*lst;
 
-//Fonction qui applique la fonction recu en argument sur le 
-//noeud ou se trouve la list
+	if (!str)
+		return (0);
+	lst = NULL;
+	while (str[0] != '\0')
+	{
+		while (str && (str[0] < '0' || str[0] > '9'))
+			str++;
+		if (str)
+		{
+			temp = ft_lstnew(ft_atoi(str));
+			ft_lstadd_back(&lst, temp);
+		}
+		while (str && str[0] > '0' && str[0] < '9')
+		{
+			str++;
+		}
+	}
+	return (lst);
+}

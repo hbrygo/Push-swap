@@ -6,7 +6,7 @@
 /*   By: hubrygo <hubrygo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 10:06:27 by hubrygo           #+#    #+#             */
-/*   Updated: 2023/05/05 11:38:24 by hubrygo          ###   ########.fr       */
+/*   Updated: 2023/05/09 15:21:08 by hubrygo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_list	*ft_set_lst(int argc, char **argv)
 		return (NULL);
 	if (argc == 2)
 	{
+		lst = NULL;
 		lst = ft_lstsplit(argv[1]);
 		return (lst);
 	}
