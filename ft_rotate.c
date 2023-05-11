@@ -6,7 +6,7 @@
 /*   By: hubrygo <hubrygo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 10:03:45 by hubrygo           #+#    #+#             */
-/*   Updated: 2023/05/09 15:21:05 by hubrygo          ###   ########.fr       */
+/*   Updated: 2023/05/11 10:26:14 by hubrygo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ void	ft_rr(t_list *lst_a, t_list *lst_b)
 {
 	ft_ra(&lst_a);
 	ft_rb(&lst_b);
-	ft_printf("RR\n");
+	ft_printf("rr\n");
 }

@@ -6,7 +6,7 @@
 /*   By: hubrygo <hubrygo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 14:42:56 by hubrygo           #+#    #+#             */
-/*   Updated: 2023/05/08 11:29:45 by hubrygo          ###   ########.fr       */
+/*   Updated: 2023/05/11 17:36:59 by hubrygo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct s_list
 {
 	int				content;
+	int				partition;
 	struct s_list	*next;
 }				t_list;
 
